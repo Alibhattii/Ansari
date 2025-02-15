@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Website</title>
+  <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./logo.png" alt="./logo">
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="#menu">About Us</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#delivery">Delivery</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Section -->
+  <section class="main-section" id="">
+    <div class="main-content">
+      <h1>Welcome to Ansari Food</h1>
+      <p>Delicious food served with love</p>
+    </div>
+  </section>
+
+  <!-- Food Items Section -->
+  <section class="food-section" id="menu">
+    <h2>Burger</h2>
+    <div class="food-container">
+      <!-- Food Card Example -->
+      <div class="food-card">
+        <div class="card-slider">
+          <img src="food1.jpg" alt="Food Item" class="card-slide active">
+          <img src="food1-alt.jpg" alt="Food Item" class="card-slide">
+          <button class="prev-btn">&larr;</button>
+          <button class="next-btn">&rarr;</button>
+        </div>
+        <h3>Burger</h3>
+        <p>$10</p>
+      </div>
+      <div class="food-card">
+        <div class="card-slider">
+          <img src="food1.jpg" alt="Food Item" class="card-slide active">
+          <img src="food1-alt.jpg" alt="Food Item" class="card-slide">
+          <button class="prev-btn">&larr;</button>
+          <button class="next-btn">&rarr;</button>
+        </div>
+        <h3>Burger</h3>
+        <p>$10</p>
+      </div>
+      <div class="food-card">
+        <div class="card-slider">
+          <img src="food1.jpg" alt="Food Item" class="card-slide active">
+          <img src="food1-alt.jpg" alt="Food Item" class="card-slide">
+          <button class="prev-btn">&larr;</button>
+          <button class="next-btn">&rarr;</button>
+        </div>
+        <h3>Burger</h3>
+        <p>$10</p>
+      </div>
+      <div class="food-card">
+        <div class="card-slider">
+          <img src="food1.jpg" alt="Food Item" class="card-slide active">
+          <img src="food1-alt.jpg" alt="Food Item" class="card-slide">
+          <button class="prev-btn">&larr;</button>
+          <button class="next-btn">&rarr;</button>
+        </div>
+        <h3>Burger</h3>
+        <p>$10</p>
+      </div>
+      <div class="food-card">
+        <div class="card-slider">
+          <img src="food1.jpg" alt="Food Item" class="card-slide active">
+          <img src="food1-alt.jpg" alt="Food Item" class="card-slide">
+          <button class="prev-btn">&larr;</button>
+          <button class="next-btn">&rarr;</button>
+        </div>
+        <h3>Burger</h3>
+        <p>$10</p>
+      </div>
+      <div class="food-card">
+        <div class="card-slider">
+          <img src="food1.jpg" alt="Food Item" class="card-slide active">
+          <img src="food1-alt.jpg" alt="Food Item" class="card-slide">
+          <button class="prev-btn">&larr;</button>
+          <button class="next-btn">&rarr;</button>
+        </div>
+        <h3>Burger</h3>
+        <p>$10</p>
+      </div>
+      <!-- Add more food cards similarly -->
+    </div>
+  </section>
+
+
+
+  <!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-content">
+    <!-- Left Section -->
+    <div class="footer-left">
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#delivery">Delivery</a></li>
+      </ul>
+    </div>
+
+    <!-- Right Section -->
+    <div class="footer-right">
+      <p>Ansari Food</p>
+      <p>Email: <a href="mailto:info@ansarifood.com">info@ansarifood.com</a></p>
+      <div class="flag">
+        <img src="./flag.png" alt="Pakistan Flag">
+        <p>+92 <a href="tel:+921234567890">123-456-7890</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Section -->
+  <div class="footer-bottom">
+    <div class="social-icons">
+      <a href="#"><img src="./facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="./instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="./twiter.png" alt="Twitter"></a>
+    </div>
+  </div>
+</footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+// Close Navbar when clicking outside
+document.addEventListener('click', (event) => {
+  const isClickInsideNavbar = event.target.closest('.navbar');
+  const isClickOnHamburger = event.target.closest('.hamburger');
+
+  if (!isClickInsideNavbar && !isClickOnHamburger) {
+    navLinks.classList.remove('active');
+  }
+});
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
